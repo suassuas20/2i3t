@@ -1,10 +1,9 @@
 .barra_superior {
-    background-color:rgb(red, green, blue)
+   background-color: rgb(223, 125, 141);
 }
- .conteudo {
-    background-color: deeppink;
- }
- .rodape {
-    background-color: darkred;
- }
-    
+.conteudo {
+   background-color: rgb(27, 161, 94);
+}
+.rodape {
+   background-color: rgb(102, 51, 160);
+}
