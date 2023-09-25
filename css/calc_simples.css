@@ -1,31 +1,35 @@
-
-.body{
-    background-color: rgb(241, 0, 0);
+body {
+    background-color: rgb(236, 204, 204);
 }
-.calc_simples{
-   background-color:blueviolet;
-   padding: 20px;
-   width: 150px;
-   border-radius: 10px;
+.calc_simples {
+    background-color: rgb(71, 47, 180);
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
 }
 .display_simples {
-  background-color: blue;
-  width: 100%;
-  text-align: center;
+   background-color: transparent;
+   width: 100%;
+   text-align: center;
 }
 #resultado {
-    background-color: red;
+    background-color: rgb(136, 136, 136);
     color: greenyellow;
 }
-.bnt {
+.btn {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
+    font-size: 22px;
 }
-.buton {
- width: 40px;
- height: 40px;
- padding: 2px;
+button {
+   width: 40px;
+   height: 40px;
+   padding: 2px;
+   color: white;
+   background-color: black;
+   margin-top: 2px;
 }
 #igual {
-    background-color: aqua;
+    background-color: rgb(255, 0, 0);
+    color: white;
 }
