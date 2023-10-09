@@ -3,7 +3,7 @@ let b = "";
 let valor = "";
 let executar = "";
 let temPonto = false;
-let desligada = true;
+let desligada = false;
 soma = (a,b) => Number(a) + Number(b);
 sub = (a,b) => Number(a) - Number(b);
 mult = (a,b) => Number(a) * Number(b);
@@ -19,10 +19,6 @@ equacao2Grau = (a,b,c) =>{
 function mostrar_resultado(){
     document.getElementById("resultado").value = valor;
 }
-function raiz_quadrada(){
-    valor = raiz (valor);
-    mostrar_resultado();
-}
 function calcular(){
     if(executar != ""){
         b = valor;
@@ -30,7 +26,8 @@ function calcular(){
         if(executar == "sub") valor = sub(a,b);
         if(executar == "div") valor = div(a,b);
         if(executar == "mult") valor = mult(a,b);
-
+        if(executar == 'porc') valor = 0;
+        if(executar == "raiz") valor = raiz(a);
         mostrar_resultado();
         executar = "";
         a = "";
@@ -41,16 +38,30 @@ function calcular(){
 }
 function desliga(){
     if(desligada){
-        desliga = false;
         zerar();
     }else{
         zerar();
         mostrar_resultado();
-        desliga = true;
     }
-    desligada = !desligada;
+    return desligada;
+}
+desliga();
+function calcula_raiz(){
+    if(valor==""){
+        valor=0;
+    }
+    valor = raiz(valor);
+    mostrar_resultado();
+}
+function porcentagem(){
+    if(executar == "mult"){
+        b = valor;   
+        valor = div (mult(a,b),100);
+        mostrar_resultado();
+     }
 }
 function zerar(){
+    if(desligada) return;
     a = "";
     b = "";
     valor = "0";
