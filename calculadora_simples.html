@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caluladora simples</title>
-    <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="css/estilo.css">
+   <script src="script/script.js"></script>
 </head>
 <body>
     <section class="calc_simples">
-        <div class="display_simples">
-            <input  readonly id="resultado" type="text" value="0">
+        <div class="display">
+            <input readonly id="resultado" type="text" value="0">
         </div>
         <div class="btn">
-            <button onclick="desliga('')">ON</button>
-            <button onclick="zerar('')">C</button>
+            <button onclick="desliga()">ON</button>
+            <button onclick="zerar()">C</button>
             <button onclick="porcentagem()">%</button>
             <button onclick="raiz_quadrada()">&radic;</button>
-
+            
             <button onclick="digitando('7')">7</button>
             <button onclick="digitando('8')">8</button>
             <button onclick="digitando('9')">9</button>
@@ -31,14 +31,14 @@
             <button onclick="digitando('2')">2</button>
             <button onclick="digitando('3')">3</button>
             <button onclick="operacao('sub')">-</button>
-            <button onclick="digitando('0')">0</button>
             <button onclick="digitando('.')">.</button>
+            <button onclick="digitando('0')">0</button>
             <button onclick="operacao('soma')">+</button>
             <button id="igual" onclick="calcular()">=</button>
         </div>
     </section>
-    <script>
-        desliga();
-    </script>
+      <script>
+        desligar();
+      </script>
 </body>
 </html>

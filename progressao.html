@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressões</title>
+    <script src="./script/script.js"></script>
+    <title>Progressoes</title>
 </head>
-
 <body>
     <section id="pa">
-        <h1>Progressão Aritmética</h1>
-        P.A. a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub> ... a<sub>n</sub> <br><br>
-        Cálculo da razão: r = a<sub>2</sub> - a<sub>1</sub> <br><br>
-        Cálculo do último termo (n): a<sub>n</sub> = a<sub>1</sub> + (n-1) * r <br><br>
-        Soma de n termos: S<sub>n</sub> = (a<sub>1</sub> + a<sub>n</sub>) * n / 2 <br><br>
-    </section>
-</body>
+        <h1>Progressoes Aritmetica</h1>
+        P.A : a <sub>1</sub>,a <sub>2</sub>,a <sub>2</sub>,...a<sub>n</sub> <br>
+        Calculo da razão: r = a <sub>2</sub> - a <sub>2</sub> <br>
+        Calculo do ultimo termo (n); a <sub>n</sub> = a <sub>1</sub> . (n - 1) . r<br>
+        Soma de n termos: S <sub>1</sub> (a <sub>1</sub> + a <sub>n</sub>) * (n/2)<br>
+    
+        <div class="calculoPA">
+            a <sub>1</sub>; <input onchange="setpa_a1()" type= "number" id="pa_a1"><br>
+            r =  <input onchange="setpa_r()"type="number" id="pa_r"><br>
+            n =  <input onchange="setpa_n()"type="number" id="pa_n"><br>
+            Sequencia: <span id="pa_seq"></span>
+        </div>
+        </section>
+        <section id="pg">
+         <h1>Progressão Geométrica</h1>
+         P.G. : a <sub>1</sub>,a <sub>2</sub>,a <sub>2</sub>,...a<sub>n</sub> <br>
+         Calculo da razão: r = a <sub>2</sub> / a <sub>1</sub> <br>
+         Calculo do ultimo termo (n): a <sub>n</sub> = a <sub>1</sub> . q <sup>(n - 1) </sup><br>
+        Soma de n termos: S <sub>n</sub> = (a <sub>1</sub> (q <sup>n</sup> - 1)) / (q - 1);
 
+        <div class="calculoPG">
+            a <sub>1</sub>; <input onchange="setpg_a1()" type= "number" id="pg_a1"><br>
+            r =  <input onchange="setpg_r()"type="number" id="pg_r"><br>
+            n =  <input onchange="setpg_n()"type="number" id="pg_n"><br>
+            Sequencia: <span id="pg_seq"></span>
+        </div>
+
+        </section>
+</body>
 </html>
