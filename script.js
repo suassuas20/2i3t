@@ -170,12 +170,28 @@ const setpa_n = ()=>{
 }
 
 const mostrarpa_seq= ()=>{
-    let pa = "";
-    if(pa_a1 !="") pa += pa_a1
-    if(pa_r !="" && pa_n !="" && n > 0){
+    let pa = pa_a1;
+    let ntermos = 1;
+    if(pa_r !="" && pa_n !="" && pa_n > 0){
         for(let i = 1; i > pa_n; i++){
-            pa += ", " + (i* pa_r) + pa_a1;
+            if(ntermos < 4 )
+            pa += ", " + (Number (pa_a1) + (i*pa_r));
+            ntermos++;
         }
+    }
+    if(pa_n > 3){
+        pa += ", ... , " + (Number(pa_a1) + (pa_n - 1) * pa_r);
     }
     document.getElementById("seq_pa").innerHTML = pa; 
 }
+let num = 0;
+const troca_imagem = () => {
+    num++;
+    setTimeout (()=>{
+        document.getElementById("figura").src = "./imagem/img"+num+".png";
+        if(num == 3)num = 0;
+        troca_imagem();
+    },1000);
+
+}
+troca_imagem();
